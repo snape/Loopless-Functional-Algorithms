@@ -3,6 +3,8 @@ Loopless Functional Algorithms
 
 http://wwwx.cs.unc.edu/~snape/publications/msc/
 
+[![DOI](https://zenodo.org/badge/8990554.svg)](https://zenodo.org/badge/latestdoi/8990554)
+
 Copyright &copy; 2005 Jamie Snape, Oxford University Computing Laboratory.
 
 Loopless algorithms generate successive combinatorial patterns in constant time,
