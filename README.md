@@ -1,19 +1,19 @@
 Loopless Functional Algorithms
 ==============================
 
-http://wwwx.cs.unc.edu/~snape/publications/msc/
+<https://www.jamiesnape.io/publications/msc/>
 
 [![DOI](https://zenodo.org/badge/8990554.svg)](https://zenodo.org/badge/latestdoi/8990554)
 
 Copyright &copy; 2005 Jamie Snape, Oxford University Computing Laboratory.
 
-Loopless algorithms generate successive combinatorial patterns in constant time,
-producing the first in time linear to the size of input. Although originally
-formulated in an imperative setting, we propose a functional interpretation of
-these algorithms in the lazy language Haskell. Since it may not be possible to
-produce a pattern in constant time, a list of integers generated using the
-library function `unfoldr` determines the transitions between consecutive
-patterns.
+*Loopless algorithms* generate successive combinatorial patterns in constant
+time, producing the first in time linear to the size of input. Although
+originally formulated in an imperative setting, we propose a functional
+interpretation of these algorithms in the lazy language Haskell. Since it may
+not be possible to produce a pattern in constant time, a list of integers
+generated using the library function `unfoldr` determines the transitions
+between consecutive patterns.
 
 The generation of Gray codes, permutations, ideals of posets and
 combinations illustrate applications of loopless algorithms in both imperative
