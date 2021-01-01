@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module Johnson where
+
 johnson 1  =  []
 johnson n  =  mix (bump 1 (johnson (n-1))) [n-1,n-2..1]
 

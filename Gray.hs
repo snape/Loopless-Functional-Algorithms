@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module Gray where
+
 gray  =  mixall . singletons
          where singletons n  =  [[i] | i <- [n-1,n-2..0]]
 

@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module LooplessConcat where
+
 import List (unfoldr)
 
 concat'  =  unfoldr step . prolog

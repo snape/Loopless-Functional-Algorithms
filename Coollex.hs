@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module Coollex where
+
 coollex' s t  =  (s+t):coollex s t
 
 coollex 1 1  =  []

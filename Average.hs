@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module Average where
+
 average  =  div' . fork (sum',length')
 
 sum'  =  foldr (+) 0

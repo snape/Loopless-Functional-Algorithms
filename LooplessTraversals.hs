@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module LooplessTraversals where
+
 import List (unfoldr)
 
 data Rose a  =  Node a [Rose a]

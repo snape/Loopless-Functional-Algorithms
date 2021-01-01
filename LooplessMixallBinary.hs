@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module LooplessMixallBinary where
+
 import List (unfoldr)
 
 data Rose a  =  Node a ([Rose a],[Rose a]) | Splice (Int,Int) ([Rose a],[Rose a])

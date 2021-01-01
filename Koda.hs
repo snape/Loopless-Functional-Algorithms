@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module Koda where
+
 data Rose a  =  Node a [Rose a]
 
 koda  =  mixall . map ruskey

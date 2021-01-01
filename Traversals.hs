@@ -13,6 +13,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+module Traversals where
+
 data Rose a  =  Node a [Rose a]
 
 data Tree a  =  Null | Fork a (Tree a) (Tree a)
