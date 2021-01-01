@@ -1,45 +1,45 @@
-This file is part of "Loopless Functional Algorithms".
-Copyright (c) 2005 Jamie Snape, Oxford University Computing Laboratory.
+-- This file is part of "Loopless Functional Algorithms".
+-- Copyright (c) 2005 Jamie Snape, Oxford University Computing Laboratory.
+--
+-- Licensed under the Apache License, Version 2.0 (the "License");
+-- you may not use this file except in compliance with the License.
+-- You may obtain a copy of the License at
+--
+--   https://www.apache.org/licenses/LICENSE-2.0
+--
+-- Unless required by applicable law or agreed to in writing, software
+-- distributed under the License is distributed on an "AS IS" BASIS,
+-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-- See the License for the specific language governing permissions and
+-- limitations under the License.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+import List (unfoldr)
 
-  https://www.apache.org/licenses/LICENSE-2.0
+mixall  =  unfoldr step . prolog
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+prolog  =  extract . mkRows'
 
-> import List (unfoldr)
+mkRows'  =  foldr op ((0,0),([],[]))
 
-> mixall = unfoldr step . prolog
+op xs ((p,q),(tr,br))  =  if even n then ((p,q+n),(sc++tr,cs++br))
+                          else ((p+q,n),(sc++tr,cs++br))
+                          where n    =  length xs
+                                cs   =  zip xs pqs
+                                sc   =  reverse cs
+                                pqs  =  (p,q):(p+q,0):pqs
 
-> prolog  =  extract . mkRows'
+extract ((p,q),rs)  =  (sr,wrapRow ((p+q,0),sr))
+                       where sr  =  pair reverse rs
 
-> mkRows'  =  foldr op ((0,0),([],[]))
+pair f (x,y)  =  (f x,f y)
 
-> op xs ((p,q),(tr,br))  =  if even n then ((p,q+n),(sc++tr,cs++br))
->                           else ((p+q,n),(sc++tr,cs++br))
->                           where n    =  length xs
->                                 cs   =  zip xs pqs
->                                 sc   =  reverse cs
->                                 pqs  =  (p,q):(p+q,0):pqs
+wrapRow r  =  consRow r []
 
-> extract ((p,q),rs)  =  (sr,wrapRow ((p+q,0),sr))
->			 where sr = pair reverse rs
+consRow ((p,q),rs) r  =  if p==0 && q==0 then r
+                         else ((p,q),rs):r
 
-> pair f (x,y)  =  (f x,f y)
+next rs ((x,(p,q)),r)  =  Just (x,(rs,consRow ((p,q),rs) r))
 
-> wrapRow r  =  consRow r []
-
-> consRow ((p,q),rs) r  =  if p==0 && q==0 then r
->			   else ((p,q),rs):r
-
-> next rs ((x,(p,q)),r)  =  Just (x,(rs,consRow ((p,q),rs) r))
-
-> step (rs,[])  =  Nothing
-> step (rs,((p,q),(t:tr,b:br)):r)  =  if p==0 then next rs (b,consRow ((p,q-1),(tr,br)) r)
->                                     else next rs (t, consRow ((p-1,q),(tr,br)) r)
+step (rs,[])                     =  Nothing
+step (rs,((p,q),(t:tr,b:br)):r)  =  if p==0 then next rs (b,consRow ((p,q-1),(tr,br)) r)
+                                    else next rs (t, consRow ((p-1,q),(tr,br)) r)

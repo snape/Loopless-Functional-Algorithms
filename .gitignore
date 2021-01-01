@@ -3,7 +3,7 @@
 .hpc
 .hsenv
 .HTF
-.stack-work/
+.stack-work
 *.aux
 *.chi
 *.chs.h

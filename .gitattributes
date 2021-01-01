@@ -2,7 +2,7 @@
 
 *               text=auto
 
-*.lhs           text whitespace-2
+*.hs            text whitespace-2
 *.md            text diff=markdown whitespace=-blank-at-eol,blank-at-eof,tab-in-indent
 
 .editorconfig   text whitespace-2
