@@ -47,7 +47,7 @@ limitations under the License.
 
 > length' (k,n)  =  n-1
 
-> wrapQueue xtq  =  consQueue xtq [] 
+> wrapQueue xtq  =  consQueue xtq []
 
 > consQueue xtq xtqs  =   if isEmpty xtq then xtqs
 >                         else xtq:xtqs

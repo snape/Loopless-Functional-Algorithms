@@ -27,20 +27,20 @@ limitations under the License.
 >                                                     where sx     =  reverse xs
 >                                                           (p,q)  =  shape psr
 >							    rs     =  shareSpines' xss
-                   
-> shape []                             =  (0,0) 
+
+> shape []                             =  (0,0)
 > shape (Node (x:xs,swap,p,q) rs:psr)  =  if swap then (p,q+1)
 >                                         else (p+q,1)
 
 > pair f (x,y)  = (f x,f y)
 
-> consSplice (Splice (p,q) rs) ps  =  if p == 0 && q == 0 then ps 
+> consSplice (Splice (p,q) rs) ps  =  if p == 0 && q == 0 then ps
 >                                     else Splice (p,q) rs:ps
 
-> step []                            =  Nothing 
-> step (Node (x:xs,swap,p,q) rs:ps)  =  if null xs then Just (x,consSplice sp ps) 
+> step []                            =  Nothing
+> step (Node (x:xs,swap,p,q) rs:ps)  =  if null xs then Just (x,consSplice sp ps)
 >                                       else Just (x,consSplice sp  (Node (xs,not swap,p,q) rs:ps))
 >                                       where sp  = if swap then Splice (p+q,0) rs
 >                                                   else Splice (p,q) rs
-> step (Splice (p,q) (t:tr,b:br):ps) =  if p == 0 then step (b:consSplice (Splice (p,q-1) (tr,br)) ps) 
+> step (Splice (p,q) (t:tr,b:br):ps) =  if p == 0 then step (b:consSplice (Splice (p,q-1) (tr,br)) ps)
 >                                       else step (t:consSplice (Splice (p-1,q) (tr,br)) ps)

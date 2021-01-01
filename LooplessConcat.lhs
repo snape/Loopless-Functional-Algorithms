@@ -19,8 +19,8 @@ limitations under the License.
 
 > prolog  =  filter (not . null)
 
-> consList xs xss  =  if null xs then xss 
+> consList xs xss  =  if null xs then xss
 >                     else xs:xss
 
-> step []            =  Nothing 
+> step []            =  Nothing
 > step ((x:xs):xss)  =  Just (x,consList xs xss)

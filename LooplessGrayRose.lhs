@@ -21,7 +21,7 @@ limitations under the License.
 
 > gray   =  unfoldr step . prolog
 
-> prolog n    =  (wrapQueue . wrapTree . foldr tmix Nothing) [n-1,n-2..0] 
+> prolog n    =  (wrapQueue . wrapTree . foldr tmix Nothing) [n-1,n-2..0]
 
 > tmix n mxt  =  mxt `o` Just (Node n empty) `o` mxt
 

@@ -19,22 +19,22 @@ limitations under the License.
 
 > data Tree a  =  Null | Fork a (Tree a) (Tree a)
 
-> preorder  =  unfoldr step . doubleWrap 
+> preorder  =  unfoldr step . doubleWrap
 >              where doubleWrap xt  =  [[xt]]
 
 > inorder  =  unfoldr step . prolog
 
-> prolog  =  wrapList . mkSpines 
+> prolog  =  wrapList . mkSpines
 
-> mkSpines t                    =   addSpines t [] 
+> mkSpines t                    =   addSpines t []
 
-> addSpines Null sps            =   sps 
+> addSpines Null sps            =   sps
 > addSpines (Fork x lt rt) sps  =   addSpines lt (Node x (mkSpines rt):sps)
 
 > wrapList xs  =  consList xs []
 
-> consList xs xss  =  if null xs then xss 
+> consList xs xss  =  if null xs then xss
 >                     else xs:xss
 
-> step []                      =  Nothing 
+> step []                      =  Nothing
 > step ((Node x xts:yts):tss)  =  Just (x,consList xts (consList yts tss))

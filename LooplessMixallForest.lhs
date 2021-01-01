@@ -19,24 +19,24 @@ limitations under the License.
 
 > data Rose a  =  Node a (Queue (Rose a))
 
-> mixall  =  unfoldr step . prolog 
+> mixall  =  unfoldr step . prolog
 
-> prolog  =  wrapQueue . fst . foldr tmix (empty,empty) 
+> prolog  =  wrapQueue . fst . foldr tmix (empty,empty)
 
-> tmix xs (ytq,qty)  =  if even (length xs) then (fmix xs (ytq,qty),fmix sx (qty,ytq)) 
->                       else (fmix xs (ytq,qty),fmix sx (ytq,qty)) 
+> tmix xs (ytq,qty)  =  if even (length xs) then (fmix xs (ytq,qty),fmix sx (qty,ytq))
+>                       else (fmix xs (ytq,qty),fmix sx (ytq,qty))
 >                       where sx  =  reverse xs
 
-> fmix xs (ytq,qty)  =  append ytq (zipWith Node xs qyqs) 
->                       where qyqs  =  qty:ytq:qyqs 
+> fmix xs (ytq,qty)  =  append ytq (zipWith Node xs qyqs)
+>                       where qyqs  =  qty:ytq:qyqs
 
-> append  =  foldl insert 
+> append  =  foldl insert
 
-> wrapQueue xtq  =  consQueue xtq [] 
+> wrapQueue xtq  =  consQueue xtq []
 
-> consQueue xtq xtqs  =  if isEmpty xtq then xtqs 
->                        else xtq:xtqs 
+> consQueue xtq xtqs  =  if isEmpty xtq then xtqs
+>                        else xtq:xtqs
 
-> step []          =  Nothing 
-> step (xtq:xtqs)  =  Just (x,consQueue ytq (consQueue ztq xtqs)) 
+> step []          =  Nothing
+> step (xtq:xtqs)  =  Just (x,consQueue ytq (consQueue ztq xtqs))
 >                     where (Node x ytq,ztq)  =  remove xtq
