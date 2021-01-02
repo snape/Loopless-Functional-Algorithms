@@ -17,3 +17,5 @@ NOTICE          text whitespace=trailing-space
 .gitignore      export-ignore
 
 .github/**      export-ignore
+
+Setup.hs        linguist-vendored
