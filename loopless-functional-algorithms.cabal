@@ -1,0 +1,64 @@
+cabal-version:       >=1.12
+
+name:                loopless-functional-algorithms
+version:             1.0.0.0
+synopsis:            Loopless Functional Algorithms
+description:         Loopless algorithms generate successive combinatorial
+                     patterns in constant time, producing the first in time
+                     linear to the size of input. Although originally formulated
+                     in an imperative setting, we propose a functional
+                     interpretation of these algorithms in the lazy language
+                     Haskell. Since it may not be possible to produce a pattern
+                     in constant time, a list of integers generated using the
+                     library function unfoldr determines the transitions between
+                     consecutive patterns.
+                     .
+                     The generation of Gray codes, permutations, ideals of
+                     posets and combinations illustrate applications of loopless
+                     algorithms in both imperative and functional form,
+                     particularly derivations of the Koda-Ruskey and
+                     Johnson-Trotter algorithms. Common themes in the
+                     construction of loopless imperative algorithms, such as
+                     focus pointers, doubly-linked lists and coroutines,
+                     contrast greatly with the functional uses of real-time
+                     queues, tree traversals, fusion and tupling.
+category:            Algorithms
+homepage:            https://www.jamiesnape.io/publications/msc/
+author:              Jamie Snape
+copyright:           2005 Jamie Snape, Oxford University Computing Laboratory
+license:             Apache-2.0
+license-files:       LICENSE,
+                     NOTICE
+build-type:          Simple
+extra-source-files:  CHANGELOG.md,
+                     README.md
+
+library
+  exposed-modules:   Average,
+                     Coollex,
+                     Gray,
+                     Johnson,
+                     Koda,
+                     LazyQueue,
+                     Li,
+                     LooplessConcat,
+                     LooplessGrayCyclic,
+                     LooplessGrayRose,
+                     LooplessJohnson,
+                     LooplessKoda,
+                     LooplessMixallBinary,
+                     LooplessMixallForest,
+                     LooplessMixallGeneralized,
+                     LooplessMixallList,
+                     LooplessMixallRose,
+                     LooplessTraversals,
+                     Mixall,
+                     PairedQueue,
+                     RealTimeQueue,
+                     Traversals
+  build-depends:     base >=3
+  default-language:  Haskell98
+
+source-repository head
+  type:              git
+  location:          https://github.com/snape/LooplessFunctionalAlgorithms.git

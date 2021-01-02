@@ -2,6 +2,7 @@
 
 *               text=auto
 
+*.cabal         text whitespace-2
 *.hs            text whitespace-2
 *.md            text diff=markdown whitespace=-blank-at-eol,blank-at-eof,tab-in-indent
 
