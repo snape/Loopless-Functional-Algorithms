@@ -1,5 +1,5 @@
-# -*- mode: gitignore; -*-
-# vi: set ft=gitignore:
+# -*- mode: ruby; -*-
+# vi: set ft=ruby:
 
 # This file is part of "Loopless Functional Algorithms".
 #
@@ -19,26 +19,7 @@
 # limitations under the License.
 #
 
-.cabal-sandbox
-.ghc.environment.*
-.hpc
-.hsenv
-.HTF
-.stack-work
-*.aux
-*.chi
-*.chs.h
-*.dyn_hi
-*.dyn_o
-*.eventlog
-*.hi
-*.hie
-*.hp
-*.o
-*.prof
-cabal-dev
-cabal.project.local
-cabal.project.local~
-cabal.sandbox.config
-dist
-dist-*
+brew 'jsonlint'
+brew 'markdownlint-cli'
+brew 'python'
+brew 'yamllint'

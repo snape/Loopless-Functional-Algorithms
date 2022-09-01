@@ -17,15 +17,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
 [attr]whitespace-0   whitespace=tab-in-indent,trailing-space
 [attr]whitespace-2   whitespace=tab-in-indent,tabwidth=2,trailing-space
+[attr]whitespace-4   whitespace=tab-in-indent,tabwidth=4,trailing-space
 [attr]whitespace-md  whitespace=-blank-at-eol,blank-at-eof,tab-in-indent
 
 *                    text=auto
 
 *.cabal              text whitespace-2
+*.cff                text linguist-documentation whitespace-2
 *.hs                 text whitespace-2
+*.json               text whitespace-2
 *.license            text linguist-documentation whitespace-0
 *.md                 text diff=markdown whitespace-md
 *.txt                text whitespace-0
@@ -33,6 +37,8 @@
 .editorconfig        text whitespace-2
 .gitattributes       text export-ignore whitespace-2
 .gitignore           text export-ignore whitespace-2
+.zenodo.json         linguist-documentation
+Brewfile             text diff=ruby export-ignore whitespace-4
 CHANGELOG.md         linguist-documentation
 CODEOWNERS           text whitespace-2
 dep5                 text linguist-documentation whitespace=trailing-space

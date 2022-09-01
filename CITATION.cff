@@ -1,0 +1,139 @@
+# -*- mode: yaml; -*-
+# vi: set ft=yaml:
+
+# This file is part of "Loopless Functional Algorithms".
+#
+# SPDX-FileCopyrightText: 2005 Jamie Snape, Oxford University Computing Laboratory
+# SPDX-License-Identifier: CC-BY-SA-4.0
+#
+# Creative Commons Attribution-ShareAlike 4.0 International Public License
+#
+# You are free to:
+#
+# * Share -- copy and redistribute the material in any medium or format
+#
+# * ShareAlike -- If you remix, transform, or build upon the material, you must
+#   distribute your contributions under the same license as the original
+#
+# * Adapt -- remix, transform, and build upon the material for any purpose, even
+#   commercially.
+#
+# The licensor cannot revoke these freedoms as long as you follow the license
+# terms.
+#
+# Under the following terms:
+#
+# * Attribution -- You must give appropriate credit, provide a link to the
+#   license, and indicate if changes were made. You may do so in any reasonable
+#   manner, but not in any way that suggests the licensor endorses you or your
+#   use.
+#
+# * No additional restrictions -- You may not apply legal terms or technological
+#   measures that legally restrict others from doing anything the license
+#   permits.
+#
+# Notices:
+#
+# * You do not have to comply with the license for elements of the material in
+#   the public domain or where your use is permitted by an applicable exception
+#   or limitation.
+#
+# * No warranties are given. The license may not give you all of the permissions
+#   necessary for your intended use. For example, other rights such as publicity,
+#   privacy, or moral rights may limit how you use the material.
+
+---
+cff-version: 1.2.0
+abstract: >-
+  Loopless algorithms generate successive combinatorial patterns in constant
+  time, producing the first in time linear to the size of input. Although
+  originally formulated in an imperative setting, we propose a functional
+  interpretation of these algorithms in the lazy language Haskell. Since it may
+  not be possible to produce a pattern in constant time, a list of integers
+  generated using the library function `unfoldr` determines the transitions
+  between consecutive patterns.
+
+  The generation of Gray codes, permutations, ideals of posets and combinations
+  illustrate applications of loopless algorithms in both imperative and
+  functional form, particularly derivations of the Koda-Ruskey and
+  Johnson-Trotter algorithms. Common themes in the construction of loopless
+  imperative algorithms, such as focus pointers, doubly-linked lists and
+  coroutines, contrast greatly with the functional uses of real-time queues,
+  tree traversals, fusion and tupling.
+authors:
+  - address: 'Wolfson Building, Parks Road'
+    affiliation: 'Oxford University Computing Laboratory'
+    city: Oxford
+    country: GB
+    family-names: Snape
+    given-names: Jamie
+    orcid: 'https://orcid.org/0000-0002-3326-9765'
+    post-code: 'OX1 3QD'
+    website: 'https://www.jamiesnape.io/'
+identifiers:
+  - type: doi
+    value: '10.5281/zenodo.1313690'
+license: 'Apache-2.0'
+message: >-
+  If you use this software, please cite it using the metadata from this file
+  and the metadata from 'preferred-citation'.
+preferred-citation:
+  abstract: >-
+    Loopless algorithms generate successive combinatorial patterns in constant
+    time, producing the first in time linear to the size of input. Although
+    originally formulated in an imperative setting, we propose a functional
+    interpretation of these algorithms in the lazy language Haskell. Since it
+    may not be possible to produce a pattern in constant time, a list of
+    integers generated using the library function `unfoldr` determines the
+    transitions between consecutive patterns.
+
+    The generation of Gray codes, permutations, ideals of posets and
+    combinations illustrate applications of loopless algorithms in both
+    imperative and functional form, particularly derivations of the Koda-Ruskey
+    and Johnson-Trotter algorithms. Common themes in the construction of
+    loopless imperative algorithms, such as focus pointers, doubly-linked lists
+    and coroutines, contrast greatly with the functional uses of real-time
+    queues, tree traversals, fusion and tupling.
+  authors:
+    - address: 'Wolfson Building, Parks Road'
+      affiliation: 'Oxford University Computing Laboratory'
+      city: Oxford
+      country: GB
+      family-names: Snape
+      given-names: Jamie
+      orcid: 'https://orcid.org/0000-0002-3326-9765'
+      post-code: 'OX1 3QD'
+      website: 'https://www.jamiesnape.io/'
+  contact:
+    - address: 'Wolfson Building, Parks Road'
+      affiliation: 'Oxford University Computing Laboratory'
+      city: Oxford
+      country: GB
+      family-names: Snape
+      given-names: Jamie
+      orcid: 'https://orcid.org/0000-0002-3326-9765'
+      post-code: 'OX1 3QD'
+      website: 'https://www.jamiesnape.io/'
+  copyright: >-
+    Copyright © 2006 Jamie Snape, Oxford University Computing Laboratory. All
+    rights reserved. Jamie Snape hereby asserts the moral right to be
+    identified as the author of Loopless Functional Algorithms.
+  languages:
+    - en
+  location:
+    address: >-
+      Oxford University Computing Laboratory, Wolfson Building, Parks Road
+    city: Oxford
+    country: GB
+    name: 'Computer Science Library'
+    post-code: 'OX1 3QD'
+  pages: 78
+  thesis-type: "Master’s thesis"
+  title: 'Loopless Functional Algorithms'
+  type: thesis
+  url: 'https://www.jamiesnape.io/publications/msc/'
+  year: 2005
+repository-code: 'https://github.com/snape/Loopless-Functional-Algorithms'
+title: 'Loopless Functional Algorithms'
+type: software
+url: 'https://www.jamiesnape.io/publications/msc/'

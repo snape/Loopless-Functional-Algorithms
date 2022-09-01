@@ -1,6 +1,3 @@
-# -*- mode: gitignore; -*-
-# vi: set ft=gitignore:
-
 # This file is part of "Loopless Functional Algorithms".
 #
 # SPDX-FileCopyrightText: 2005 Jamie Snape, Oxford University Computing Laboratory
@@ -19,26 +16,5 @@
 # limitations under the License.
 #
 
-.cabal-sandbox
-.ghc.environment.*
-.hpc
-.hsenv
-.HTF
-.stack-work
-*.aux
-*.chi
-*.chs.h
-*.dyn_hi
-*.dyn_o
-*.eventlog
-*.hi
-*.hie
-*.hp
-*.o
-*.prof
-cabal-dev
-cabal.project.local
-cabal.project.local~
-cabal.sandbox.config
-dist
-dist-*
+cffconvert
+reuse
