@@ -19,6 +19,7 @@
 # limitations under the License.
 #
 
+brew 'git'
 brew 'jsonlint'
 brew 'markdownlint-cli'
 brew 'python'

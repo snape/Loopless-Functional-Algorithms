@@ -20,6 +20,7 @@
 #
 
 [attr]whitespace-0   whitespace=tab-in-indent,trailing-space
+[attr]whitespace-1   whitespace=tab-in-indent,tabwidth=1,trailing-space
 [attr]whitespace-2   whitespace=tab-in-indent,tabwidth=2,trailing-space
 [attr]whitespace-4   whitespace=tab-in-indent,tabwidth=4,trailing-space
 [attr]whitespace-md  whitespace=-blank-at-eol,blank-at-eof,tab-in-indent
@@ -37,11 +38,11 @@
 .editorconfig        text whitespace-2
 .gitattributes       text export-ignore whitespace-2
 .gitignore           text export-ignore whitespace-2
-.zenodo.json         linguist-documentation
+.zenodo.json         export-ignore linguist-documentation
 Brewfile             text diff=ruby export-ignore whitespace-4
 CHANGELOG.md         linguist-documentation
 CODEOWNERS           text whitespace-2
-dep5                 text linguist-documentation whitespace=trailing-space
+dep5                 text linguist-documentation whitespace-1
 LICENSE              text linguist-documentation linguist-vendored whitespace-0
 README.md            linguist-documentation
 Setup.hs             linguist-vendored
